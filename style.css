@@ -3,6 +3,7 @@
 }
 body{
      margin: 0;
+     overflow: hidden;
 }
 #top{
     height: 40px; 
@@ -10,7 +11,6 @@ body{
     background-color: #364a55;
     padding-top: 40px;
     text-align: center;
-    position: relative;
 }
 .title{
     background-color: #364a55;
@@ -27,10 +27,10 @@ body{
     
 }
 .parent{
-    height: 600px;
+    height: 100%;
     display: flex;
     padding-top: 80px;
-    padding-left: 50px;
+    padding-left: 80px;
 }
 .child1{
     width: 250px;
@@ -40,9 +40,9 @@ body{
 }
 .child2{
     height: 500px;
-    width: 900px;
+    margin-left: 10%;
+    margin-right: 10%;
     display: block;
-    padding-left: 180px;
     position: relative;
 }
 .child11{
@@ -96,3 +96,55 @@ body{
     border-radius: 15px;
 }
 
+@media (max-width: 1098px) {
+    .parent {
+        flex-direction: column; /* Stack children vertically */
+        padding-left: 0; /* Remove left padding */
+        padding-left: 250px;
+    }
+    .child1 {
+        height: 300px;
+        width: 500px; /* Full width of parent */
+        margin-bottom: 20px; /* Add spacing between child1 and child2 */
+        margin-left: 128px;
+        margin-right: 50px;
+    }
+    .child2 {
+        width: 100%; /* Full width of parent */
+    }
+    #top{
+        width: 1300px;
+    }
+}
+
+@media (max-width: 790px) {
+    .child1 {
+        margin-left: 118px;
+        margin-right: 50px;
+    }
+    
+}
+@media (max-width: 715px) {
+    .child1 {
+        margin-left: 95px;
+        margin-right: 50px;
+    }
+    
+}
+@media (max-width: 540px) {
+    .child1 {
+        margin-left: 90px;
+        margin-right: 50px;
+    }
+    
+}
+@media (max-width: 340px) {
+    .child1 {
+        margin-left: 68px;
+        margin-right: 50px;
+    }
+    .parent{
+        margin-left: 90px;
+    }
+    
+}
